@@ -10,6 +10,6 @@ public enum Color {
 	}
 	@Override
 	public String toString() {
-		return "Cadena -> " + cadenaAMostrar;
+		return "cadenaAMostrar = " + cadenaAMostrar;
 	}
 }

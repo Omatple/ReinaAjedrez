@@ -65,4 +65,8 @@ public class Posicion {
 		return columna == other.columna && fila == other.fila;
 	}
 
+	@Override
+	public String toString() {
+		return "Fila = " + fila + ", Columna = " + columna;
+	}
 }
