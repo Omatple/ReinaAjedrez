@@ -1,8 +1,19 @@
 package org.iesalandalus.programacion.reinaajedrez;
 
+import javax.naming.OperationNotSupportedException;
+
 public class Posicion {
 	private int fila;
 	private char columna;
+
+	public void Posicion(int fila, char columna) throws OperationNotSupportedException {
+		try {
+			setFila(fila);
+			setColumna(columna);
+		} catch (IllegalArgumentException e) {
+			throw new OperationNotSupportedException("Movimiento no válido: " + e.getMessage());
+		}
+	}
 
 	public int getFila() {
 		return fila;
@@ -22,11 +33,9 @@ public class Posicion {
 	}
 
 	public void setColumna(char columna) {
-		char a = 1;
-		char h = 8;
-		if (columna < a) {
+		if (columna < 1) {
 			throw new IllegalArgumentException("Esta casilla no existe, ni ninguna por debajo de la casilla a. ");
-		} else if (columna > h) {
+		} else if (columna > 8) {
 			throw new IllegalArgumentException("Esta casilla no existe, ni ninguna por encima de la casilla h. ");
 		}
 		this.columna = columna;
