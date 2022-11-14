@@ -26,7 +26,7 @@ public class Posicion {
 		return fila;
 	}
 
-	public void setFila(int fila) {
+	private void setFila(int fila) {
 		if (fila < 1) {
 			throw new IllegalArgumentException("Esta casilla no existe, ni ninguna por debajo de la casilla 1. ");
 		} else if (fila > 8) {
@@ -39,7 +39,7 @@ public class Posicion {
 		return columna;
 	}
 
-	public void setColumna(char columna) {
+	private void setColumna(char columna) {
 		if (columna < 1) {
 			throw new IllegalArgumentException("Esta casilla no existe, ni ninguna por debajo de la casilla a. ");
 		} else if (columna > 8) {
