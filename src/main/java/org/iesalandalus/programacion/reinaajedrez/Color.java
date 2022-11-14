@@ -3,12 +3,11 @@ package org.iesalandalus.programacion.reinaajedrez;
 public enum Color {
 	BLANCO, NEGRO;
 
-	String cadenaAMostrar;
+	private String cadenaAMostrar;
 
-	public void CadenaAMostrar() {
+	public Color(String cadenaAMostrar) {
 		this.cadenaAMostrar = cadenaAMostrar;
 	}
-
 	@Override
 	public String toString() {
 		return "Cadena -> " + cadenaAMostrar;
