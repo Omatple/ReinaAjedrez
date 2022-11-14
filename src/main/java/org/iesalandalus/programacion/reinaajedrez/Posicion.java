@@ -15,6 +15,11 @@ public class Posicion {
 		}
 	}
 
+	public Posicion(Posicion posicion) {
+		this.fila = posicion.getFila();
+		this.columna = posicion.getColumna();
+	}
+
 	public int getFila() {
 		return fila;
 	}
