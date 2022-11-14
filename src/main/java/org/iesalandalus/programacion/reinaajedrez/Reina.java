@@ -1,5 +1,6 @@
 package org.iesalandalus.programacion.reinaajedrez;
 
 public class Reina {
-private 
+private Color color;
+private Posicion posicion;
 }
