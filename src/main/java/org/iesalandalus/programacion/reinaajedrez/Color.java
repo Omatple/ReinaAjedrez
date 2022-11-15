@@ -1,16 +1,16 @@
 package org.iesalandalus.programacion.reinaajedrez;
 
 public enum Color {
-	BLANCO("BLANCO"), NEGRO("NEGRO");
+	BLANCO("Blanco"), NEGRO("Negro");
 
-	private String cadenaAMostrar;
+	String cadenaAMostrar;
 
-	public Color(String cadenaAMostrar) {
+	Color(String cadenaAMostrar) {
 		this.cadenaAMostrar = cadenaAMostrar;
 	}
 
 	@Override
 	public String toString() {
-		return "cadenaAMostrar = " + cadenaAMostrar;
+		return cadenaAMostrar;
 	}
 }

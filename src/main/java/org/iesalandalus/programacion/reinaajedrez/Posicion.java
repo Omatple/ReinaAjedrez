@@ -8,12 +8,12 @@ public class Posicion {
 	private int fila;
 	private char columna;
 
-	public void Posicion(int fila, char columna) throws OperationNotSupportedException {
+	public Posicion(int fila, char columna) throws OperationNotSupportedException {
 		try {
 			setFila(fila);
 			setColumna(columna);
 		} catch (IllegalArgumentException e) {
-			throw new OperationNotSupportedException("Movimiento no válido: " + e.getMessage());
+			throw new OperationNotSupportedException("Posición no válida: " + e.getMessage());
 		}
 	}
 
@@ -40,9 +40,9 @@ public class Posicion {
 	}
 
 	private void setColumna(char columna) {
-		if (columna < 1) {
+		if (columna < 'a') {
 			throw new IllegalArgumentException("Esta casilla no existe, ni ninguna por debajo de la casilla a. ");
-		} else if (columna > 8) {
+		} else if (columna > 'h') {
 			throw new IllegalArgumentException("Esta casilla no existe, ni ninguna por encima de la casilla h. ");
 		}
 		this.columna = columna;
