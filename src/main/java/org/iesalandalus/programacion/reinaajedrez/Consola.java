@@ -19,9 +19,9 @@ public class Consola {
 	public static int elegirOpcionMenu() {
 		int opcionmenu;
 		do {
-			System.out.println("Escriba el numero de la opcion que desee elegir. ");
+			System.out.print("Escriba el numero de la opcion que desee elegir: ");
 			opcionmenu = Entrada.entero();
-		} while (opcionmenu < 1 || opcionmenu > 5);
+		} while (opcionmenu < 1 || opcionmenu > 4);
 		return opcionmenu;
 	}
 
@@ -29,9 +29,9 @@ public class Consola {
 		Color color = Color.BLANCO;
 		int elegircolor;
 		do {
-			System.out.println("Escriba el numero del color que desee elegir para su reina: ");
-			System.out.println("Escriba numero 1 para color BLANCO. ");
-			System.out.println("Escriba numero 2 para color NEGRO. ");
+			System.out.println("Numero 1 para color BLANCO. ");
+			System.out.println("Numero 2 para color NEGRO. ");
+			System.out.print("Escriba el numero del color que desee elegir para su reina: ");
 			elegircolor = Entrada.entero();
 		} while (elegircolor < 1 || elegircolor > 2);
 		switch (elegircolor) {
@@ -62,7 +62,7 @@ public class Consola {
 		Direccion direccion = Direccion.NORTE;
 		int elegirdireccion;
 		do {
-			System.out.println("Escriba el numero de la direccion en la que desee moverse. ");
+			System.out.print("Escriba el numero de la direccion en la que desee moverse: ");
 			elegirdireccion = Entrada.entero();
 		} while (elegirdireccion < 1 || elegirdireccion > 8);
 		switch (elegirdireccion) {
@@ -97,8 +97,8 @@ public class Consola {
 	public static int elegirPasos() {
 		int elegirpasos;
 		do {
-			System.out.println(
-					"Escriba la cantidad de pasos entre 1 y 7 (ambos incluidos) que desee que se mueva su reina. ");
+			System.out.print(
+					"Escriba la cantidad de pasos entre 1 y 7 (ambos incluidos) que desee que se mueva su reina: ");
 			elegirpasos = Entrada.entero();
 		} while (elegirpasos < 1 || elegirpasos > 7);
 		return elegirpasos;

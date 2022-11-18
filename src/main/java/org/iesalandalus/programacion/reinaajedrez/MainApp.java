@@ -12,7 +12,6 @@ public class MainApp {
 	private static void ejecutarOpcion(int opcion) {
 		do {
 			Consola.mostrarMenu();
-			System.out.println("5º Opcion: Mostrar Reina. ");
 			opcion = Consola.elegirOpcionMenu();
 			switch (opcion) {
 			case 1:
@@ -29,9 +28,6 @@ public class MainApp {
 				break;
 			case 4:
 				Consola.despedirse();
-				break;
-			case 5:
-				mostrarReina();
 				break;
 			}
 		} while (opcion != 4);
@@ -50,6 +46,7 @@ public class MainApp {
 		if (reina == null) {
 			System.out.println("");
 		} else {
+			Consola.mostrarMenuDirecciones();
 			reina.mover(Consola.elegirDireccion(), Consola.elegirPasos());
 		}
 	}

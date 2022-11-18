@@ -27,7 +27,7 @@ class ReinaTest {
 	private static Reina reinaNegra;
 	
 	@BeforeAll
-	static void asignarValoresPosiciones() {
+	static void asignarValoresPosiciones() throws OperationNotSupportedException {
 		posicionDefectoNegra = new Posicion(8, 'd');
 		posicionDefectoBlanca = new Posicion(1, 'd');
 	}

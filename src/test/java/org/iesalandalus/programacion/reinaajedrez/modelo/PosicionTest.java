@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import javax.naming.OperationNotSupportedException;
+
 import org.junit.jupiter.api.Test;
 
 class PosicionTest {
@@ -24,7 +26,7 @@ class PosicionTest {
 
 
 	@Test
-	void constructorFilaValidaColumnaValidaCreaPosicionCorrectamente() {
+	void constructorFilaValidaColumnaValidaCreaPosicionCorrectamente() throws OperationNotSupportedException {
 		Posicion posicion;
 		posicion = new Posicion(1, 'a');
 		assertEquals(1, posicion.getFila(), FILA_NO_ESPERADA);
@@ -60,7 +62,7 @@ class PosicionTest {
 	}
 	
 	@Test
-	void constructorPosicionValidaDevuelveCopiaDeLaPosicion() {
+	void constructorPosicionValidaDevuelveCopiaDeLaPosicion() throws OperationNotSupportedException {
 		Posicion posicion = new Posicion(1, 'a');
 		Posicion nuevaPosicion = new Posicion(posicion);
 		assertEquals(posicion, nuevaPosicion, POSICION_NO_ESPERADA);
@@ -73,7 +75,7 @@ class PosicionTest {
 	}
 	
 	@Test
-	void equalsHashCodeComparaCorrectamente() {
+	void equalsHashCodeComparaCorrectamente() throws OperationNotSupportedException {
 		Posicion posicion1 = new Posicion(1, 'a');
 		assertEquals(posicion1, posicion1, OBJETOS_DEBERIAN_SER_IGUALES);
 		assertEquals(posicion1.hashCode(), posicion1.hashCode(), HASHS_DEBERIAN_SER_IGUALES);
@@ -91,7 +93,7 @@ class PosicionTest {
 	}
 	
 	@Test
-	void toStringDevuelveLaCadenaEsperada() {
+	void toStringDevuelveLaCadenaEsperada() throws OperationNotSupportedException {
 		assertEquals("fila=1, columna=a", new Posicion(1, 'a').toString(), CADENA_NO_ESPERADA);
 	}
 

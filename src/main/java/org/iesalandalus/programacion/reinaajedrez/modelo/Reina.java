@@ -41,56 +41,56 @@ public class Reina {
 			try {
 				posicion = new Posicion(posicion.getFila() + pasos, posicion.getColumna());
 			} catch (OperationNotSupportedException e) {
-				e.printStackTrace();
+				System.out.println("No puedes moverte a esta posicion ya que tu reina se saldria del tablero. Intentalo de nuevo. ");
 			}
 			break;
 		case SUR:
 			try {
 				posicion = new Posicion(posicion.getFila() - pasos, posicion.getColumna());
 			} catch (OperationNotSupportedException e) {
-				e.printStackTrace();
+				System.out.println("No puedes moverte a esta posicion ya que tu reina se saldria del tablero. Intentalo de nuevo. ");
 			}
 			break;
 		case ESTE:
 			try {
 				posicion = new Posicion(posicion.getFila(), (char) (posicion.getColumna() + pasos));
 			} catch (OperationNotSupportedException e) {
-				e.printStackTrace();
+				System.out.println("No puedes moverte a esta posicion ya que tu reina se saldria del tablero. Intentalo de nuevo. ");
 			}
 			break;
 		case OESTE:
 			try {
 				posicion = new Posicion(posicion.getFila(), (char) (posicion.getColumna() - pasos));
 			} catch (OperationNotSupportedException e) {
-				e.printStackTrace();
+				System.out.println("No puedes moverte a esta posicion ya que tu reina se saldria del tablero. Intentalo de nuevo. ");
 			}
 			break;
 		case NORESTE:
 			try {
 				posicion = new Posicion(posicion.getFila() + pasos, (char) (posicion.getColumna() + pasos));
 			} catch (OperationNotSupportedException e) {
-				e.printStackTrace();
+				System.out.println("No puedes moverte a esta posicion ya que tu reina se saldria del tablero. Intentalo de nuevo. ");
 			}
 			break;
 		case NOROESTE:
 			try {
 				posicion = new Posicion(posicion.getFila() + pasos, (char) (posicion.getColumna() - pasos));
 			} catch (OperationNotSupportedException e) {
-				e.printStackTrace();
+				System.out.println("No puedes moverte a esta posicion ya que tu reina se saldria del tablero. Intentalo de nuevo. ");
 			}
 			break;
 		case SURESTE:
 			try {
 				posicion = new Posicion(posicion.getFila() - pasos, (char) (posicion.getColumna() + pasos));
 			} catch (OperationNotSupportedException e) {
-				e.printStackTrace();
+				System.out.println("No puedes moverte a esta posicion ya que tu reina se saldria del tablero. Intentalo de nuevo. ");
 			}
 			break;
 		case SUROESTE:
 			try {
 				posicion = new Posicion(posicion.getFila() - pasos, (char) (posicion.getColumna() - pasos));
 			} catch (OperationNotSupportedException e) {
-				e.printStackTrace();
+				System.out.println("No puedes moverte a esta posicion ya que tu reina se saldria del tablero. Intentalo de nuevo. ");
 			}
 			break;
 		}
